@@ -3,11 +3,13 @@ package nl.mvdvalk.service;
 import nl.mvdvalk.dao.StudentDao;
 import nl.mvdvalk.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 @Service
+@Qualifier("fakeData")
 public class StudentService {
     @Autowired
     private StudentDao studentDao;
